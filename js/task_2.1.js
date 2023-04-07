@@ -34,7 +34,7 @@ function addInfo(character) {
     $('.description').append(`<li><b>Id:</b> ${character.id}</li>`);
     $('.description').append(`<li><b>Location name:</b> ${character.location.name}</li>`);
     $('.description').append(`<li><b>Location url:</b> ${character.location.url}</li>`);
-    $('.description').append(`<li><b>Origin:</b> ${character.origin}</li>`);
+    $('.description').append(`<li><b>Origin name:</b> ${character.origin.name}</li>`);
     $('.description').append(`<li><b>Species:</b> ${character.species}</li>`);
     $('.description').append(`<li><b>Status:</b> ${character.status}</li>`);
     $('.description').append(`<li><b>Type:</b> ${character.type}</li>`);
