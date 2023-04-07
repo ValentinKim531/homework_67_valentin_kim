@@ -4,17 +4,22 @@ $(document).ready(function(){
         $('#container').append(input);
         input.id = 'delete';
         input.type = 'button';
-        input.value = 'Закрыть';
+        input.value = 'Close';
         
         const div = document.createElement('div');
         $('#container').append(div);
         div.className = 'class'
         $(div).append('If you click on the "Close" button, I will disappear').slideDown("slow").slideUp(5000);
-        
-        $("#delete").fadeOut(5000).click(function(){
+
+        $("#delete").click(function(){
         $('.class').remove();
         $("#delete").remove();
         });
+
+        setTimeout(function (){
+            $('.class').remove();
+            $("#delete").remove();
+        }, 5000)
     });
 });
 
