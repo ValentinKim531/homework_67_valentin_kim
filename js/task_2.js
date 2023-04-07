@@ -1,3 +1,10 @@
+const h1 = document.createElement('h1');
+const card = document.createElement('section');
+h1.innerHTML = 'The Rick and Morty API';
+h1.className = 'title'
+card.id = 'card-container' 
+
+
 $.ajax({
     url: 'https://rickandmortyapi.com/api/character',
     method: 'GET',
@@ -13,10 +20,12 @@ $.ajax({
 
 
 function makeCards(characterArray) {
-    const cardContainer = document.querySelector('#card-container')
+    $('.container').append(card)
+    const cardContainer = document.querySelector('#card-container')    
+    $('div').before(h1)
     characterArray.forEach(character => {
         cardContainer.innerHTML = cardContainer.innerHTML + 
-        `<div id='character-card-${character.id}'
+        `<div class='character-card title ${character.id}'
         <h2><b>${character.name}</b></h2>
         <br>
         <a href='http://localhost:5500/character.html?id=${character.id}'>

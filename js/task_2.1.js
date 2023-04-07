@@ -6,6 +6,8 @@ const h2 = document.createElement('h2');
 const ul = document.createElement('ul');
 const ul2 = document.createElement('ul');
 ul.className = 'description'
+ul2.className = 'episodes'
+image.className = 'image'
 
 $.ajax({
     url: `https://rickandmortyapi.com/api/character/${param}`,
